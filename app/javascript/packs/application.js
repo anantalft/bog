@@ -8,3 +8,12 @@
 // layout file, like app/views/layouts/application.html.erb
 
 console.log('Hello World from Webpacker')
+
+import ReactOnRails from "react-on-rails";
+import Boggle from "../bundles/boggle/components/boggle.js.jsx";
+
+console.log('Hello World from Webpacker');
+
+ReactOnRails.register({
+  Boggle,
+});

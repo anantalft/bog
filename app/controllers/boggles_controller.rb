@@ -1,6 +1,7 @@
 class BogglesController < ApplicationController
   before_action :set_boggle, only: [:show, :edit, :update, :destroy]
 
+  layout 'boggle'
   # GET /boggles
   # GET /boggles.json
   def index
