@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @boggle.name %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @boggle.board %>
+</p>
+
+<p>
+  <strong>Row:</strong>
+  <%= @boggle.row %>
+</p>
+
+<p>
+  <strong>Col:</strong>
+  <%= @boggle.col %>
+</p>
+
+<%= link_to 'Edit', edit_boggle_path(@boggle) %> |
+<%= link_to 'Back', boggles_path %>
