@@ -1,5 +1,5 @@
 import React from 'react'
-import {Board} from "./board.js";
+import Board from "./board.js";
 
 export default class Boggle extends React.Component {
   constructor(props) {
@@ -25,14 +25,17 @@ export default class Boggle extends React.Component {
     })
   }
 
+
   render() {
     return (
     <div>
       <div>
       </div>
       <div>
-        <input type="button" value="Refresh"
-               onclick="window.location.reload();"/>
+        <input type="button" value="Refresh"/>
+      </div>
+      <div>
+        Valid words: {this.state.valid_words.join(",")}
       </div>
       <div>
         <Board board={this.state.board} valid_word={this.state.valid_words}/>
