@@ -7,19 +7,19 @@ export default class Board extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state ={
-      words:[]
+    this.state = {
+      words: []
     }
     this.handleTextChange = this.handleTextChange.bind(this);
   }
 
-  handleTextChange(input_text) {
-    if (this.props.valid_word.indexOf(input_text) > -1){
-      console.log('mytrue')
-      this.setState({words: input_text})
-    }else{
-      this.setState({words: "Not matched"})
-      console.log('my false');
+  handleTextChange(e, input_text) {
+    if (e.key === 'Enter') {
+      if (this.props.valid_word.indexOf(input_text) > -1) {
+        this.setState({words: this.state.words.concat(input_text)})
+      } else {
+        console.log('my false');
+      }
     }
   }
 
@@ -45,7 +45,7 @@ export default class Board extends React.Component {
             </table>
           </td>
           <td width="50%">
-            <WordArea word={this.state.words}/>
+            <WordArea words={this.state.words}/>
           </td>
         </tr>
         </tbody>

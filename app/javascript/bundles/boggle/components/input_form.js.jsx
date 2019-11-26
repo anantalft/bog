@@ -3,7 +3,11 @@ import React from 'react'
 export default class InputForm extends React.Component {
 
   handleChange() {
-    this.props.handleTextChange(this.refs.filterTextInput.value)
+    // this.props.handleTextChange(this.refs.filterTextInput.value)
+  }
+
+  onKeyPress(e){
+    this.props.handleTextChange(e,this.refs.filterTextInput.value)
   }
 
   componentDidMount(){
@@ -13,7 +17,7 @@ export default class InputForm extends React.Component {
   render() {
     return (
     <div>
-      <input placeholder="Insert Word" ref="filterTextInput"  type="text" onChange={this.handleChange.bind(this)}/>
+      <input placeholder="Insert Word" onKeyPress={this.onKeyPress.bind(this)} ref="filterTextInput"  type="text" onChange={this.handleChange.bind(this)}/>
     </div>
     );
   }

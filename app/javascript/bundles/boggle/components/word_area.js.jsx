@@ -4,10 +4,13 @@ import React from 'react'
 export default class WordArea extends React.Component {
 
   render() {
+    const words = this.props.words.map((word) => (
+    <div>{word}</div>
+    ));
+
     return (
     <div>
-      <div>{this.props.word}</div>
-      <div>orange</div>
+      {words}
     </div>
     )
   }
