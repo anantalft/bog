@@ -15,8 +15,10 @@ export default class Board extends React.Component {
 
   handleTextChange(e, input_text) {
     if (e.key === 'Enter') {
-      if (this.props.valid_word.indexOf(input_text) > -1) {
-        this.setState({words: this.state.words.concat(input_text)})
+      if (this.props.valid_words.indexOf(input_text) > -1) {
+        if (!(this.state.words.indexOf(input_text) > -1)){
+          this.setState({words: this.state.words.concat(input_text)})
+        }
       } else {
         console.log('my false');
       }
@@ -28,7 +30,18 @@ export default class Board extends React.Component {
     <BoardRow board_row={board_row}/>
     ));
 
+    const isAllWords = this.state.words;
+    let message;
+
+    if (isAllWords.length == this.props.valid_words.length){
+      message = <div>Congratulations</div>
+    }else {
+      message = <div>Try More</div>
+    }
+
     return (<div>
+      <div>Please find {this.props.valid_words.length} words from board.</div>
+      {message}
       <table border="1">
         <tbody>
         <tr>

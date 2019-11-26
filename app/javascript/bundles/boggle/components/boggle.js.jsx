@@ -38,7 +38,7 @@ export default class Boggle extends React.Component {
         Valid words: {this.state.valid_words.join(",")}
       </div>
       <div>
-        <Board board={this.state.board} valid_word={this.state.valid_words}/>
+        <Board board={this.state.board} valid_words={this.state.valid_words}/>
       </div>
     </div>
     )
