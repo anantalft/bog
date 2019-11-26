@@ -8,7 +8,8 @@ export default class Board extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      words: []
+      words: [],
+      desc: ''
     }
     this.handleTextChange = this.handleTextChange.bind(this);
   }
@@ -18,9 +19,10 @@ export default class Board extends React.Component {
       if (this.props.valid_words.indexOf(input_text) > -1) {
         if (!(this.state.words.indexOf(input_text) > -1)){
           this.setState({words: this.state.words.concat(input_text)})
+          this.setState({desc: 'Valid word'})
         }
       } else {
-        console.log('my false');
+        this.setState({desc: 'Invalid word. Try again'})
       }
     }
   }
@@ -34,14 +36,16 @@ export default class Board extends React.Component {
     let message;
 
     if (isAllWords.length == this.props.valid_words.length){
-      message = <div>Congratulations</div>
+      message = <div>Congratulations. Please reload to play again.</div>
     }else {
-      message = <div>Try More</div>
+      message = <div>Continue playing ...</div>
     }
 
     return (<div>
       <div>Please find {this.props.valid_words.length} words from board.</div>
       {message}
+      <div>Score: 0</div>
+      <div>{this.state.desc}</div>
       <table border="1">
         <tbody>
         <tr>
