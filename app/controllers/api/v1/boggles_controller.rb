@@ -1,3 +1,4 @@
+require 'bo'
 class Api::V1::BogglesController < ApplicationController
 
   def index
