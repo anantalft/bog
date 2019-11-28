@@ -31,5 +31,4 @@ test:
 production:
   <<: *default
   database: boggle_production
-  username: boggle
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %
