@@ -1,3 +1,4 @@
+require 'board'
 class Bo
 
   def initialize

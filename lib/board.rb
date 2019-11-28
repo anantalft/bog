@@ -1,3 +1,4 @@
+require 'trie'
 class Board
   attr_accessor :board_array
 

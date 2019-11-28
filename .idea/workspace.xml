@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0e307ad2-3af2-4645-9347-49dbfdadf377" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/lib/bo.rb" afterPath="$PROJECT_DIR$/lib/bo.rb" />
+      <change beforePath="$PROJECT_DIR$/lib/board.rb" afterPath="$PROJECT_DIR$/lib/board.rb" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -39,21 +40,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bo.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bo.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/bo.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="board.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="board.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/board.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,12 +133,12 @@
         <option value="$PROJECT_DIR$/app/controllers/boggles_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/lib/board.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/views/boggles/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/boggles_controller.rb" />
         <option value="$PROJECT_DIR$/lib/bo.rb" />
+        <option value="$PROJECT_DIR$/lib/board.rb" />
       </list>
     </option>
   </component>
@@ -274,12 +275,12 @@
       <updated>1574769872678</updated>
       <workItem from="1574769874017" duration="826000" />
       <workItem from="1574781858436" duration="7000" />
-      <workItem from="1574935597042" duration="5105000" />
+      <workItem from="1574935597042" duration="5424000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5938000" />
+    <option name="totallyTimeSpent" value="6257000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -382,14 +383,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/board.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -432,8 +425,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bo.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/board.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
