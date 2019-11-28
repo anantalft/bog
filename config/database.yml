@@ -5,23 +5,31 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: boggle_development
+  username: postgres
+  password: postgres
+  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: boggle_test
+  username: postgres
+  password: postgres
+  host: localhost
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: boggle
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  <<: *default
+  database: boggle_production
+  username: boggle
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %
