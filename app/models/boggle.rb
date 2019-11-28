@@ -1,4 +1,0 @@
-class Boggle < ApplicationRecord
-
-
-end
