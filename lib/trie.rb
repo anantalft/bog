@@ -12,6 +12,17 @@ class Trie < Hash
         h[char] ||= { }
       end
     end
+  end
 
+  def build_dictionary_from(file_path)
+    words = []
+    File.open(file_path) do |file|
+      file.each do |line|
+        words<<line.strip
+      end
+    end
+    self.build(words)
+
+    return self
   end
 end
