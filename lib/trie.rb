@@ -21,6 +21,7 @@ class Trie < Hash
         words<<line.strip
       end
     end
+
     self.build(words)
 
     return self
