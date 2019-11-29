@@ -1,6 +1,6 @@
 require 'trie'
 class Board
-  attr_accessor :board_array
+  attr_accessor :board_array, :b_string
 
   def initialize
     b_string = (0...16).map { (65 + rand(26)).chr }.join
