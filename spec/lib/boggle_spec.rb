@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'pry'
 RSpec.describe Boggle, type: :lib do
 
-  describe "#solve_and_return_v_words" do
+  describe "#solve" do
 
     it "#solve_and_return_v_words" do
       board = double()
