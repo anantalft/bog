@@ -2,37 +2,33 @@ require 'rails_helper'
 require 'pry'
 RSpec.describe Boggle, type: :lib do
 
-  # subject { Board.new('AERTSDEFRTHYUJKM') }
-  #let(:boggle) { described_class.new }
-  let(:boggle) { double('boggle') }
+  describe "#solve_and_return_v_words" do
 
-  describe "#solve" do
-    it "solve" do
+    it "#solve_and_return_v_words" do
+      board = double()
+      trie = {"b"=>{"o"=>{"b"=>{}}}, "a"=>{"e"=>{"c"=>{"o"=>{"k"=>{}}}}}, "c"=>{"o"=>{"d"=>{}}}}
 
-      # b_string = double('ABCDECOHBOKLBNOE')
-      # file_path = double('file_path')
-      #
-      #
-      #
-      # board = double(b_string)
-      # trie = double()
-      # valid_words = double()
-      #
-      #
-      #
-      # allow(board).to receive(:new).with(b_string)
-      # allow(board).to receive(:build).and_return([["A", "B", "C", "D"], ["E", "C", "O", "H"], ["B", "O", "K", "L"], ["B", "N", "O", "E"]])
-      #
-      #
-      #
-      # allow(File).to receive(:open).with(file_path).and_yield(['bob','aecok','cod'])
-      # allow(trie). to receive(:build_dictionary_from).with(file_path).and_return({"b"=>{"o"=>{"b"=>{}}}, "a"=>{"e"=>{"c"=>{"o"=>{"k"=>{}}}}}, "c"=>{"o"=>{"d"=>{}}}})
-      #
-      # allow(boggle).to receive(:new).with(b_string, file_path)
-      # allow(boggle).to receive(:valid_words).and_return([])
-      # #boggle.solve
-      # expect(boggle.valid_words).to eq(['bob','aecok','cod'])
+      allow(board).to receive(:board).and_return([["A", "B", "C", "D"], ["E", "C", "O", "H"], ["B", "O", "K", "L"], ["B", "N", "O", "E"]])
 
+      allow(board).to receive(:get_neighbors).with(0,0).and_return([[0, 1], [1, 0], [1, 1]])
+      allow(board).to receive(:get_neighbors).with(0,1).and_return([[0, 0], [0, 2], [1, 0], [1, 1], [1, 2]])
+      allow(board).to receive(:get_neighbors).with(0,2).and_return([[0, 1], [0, 3], [1, 1], [1, 2], [1, 3]])
+      allow(board).to receive(:get_neighbors).with(0,3).and_return([[0, 2], [1, 2], [1, 3]])
+      allow(board).to receive(:get_neighbors).with(1,0).and_return([[0, 0], [0, 1], [1, 1], [2, 0], [2, 1]])
+      allow(board).to receive(:get_neighbors).with(1,1).and_return([[0, 0], [0, 1], [0, 2], [1, 0], [1, 2], [2, 0], [2, 1], [2, 2]])
+      allow(board).to receive(:get_neighbors).with(1,2).and_return([[0, 1], [0, 2], [0, 3], [1, 1], [1, 3], [2, 1], [2, 2], [2, 3]])
+      allow(board).to receive(:get_neighbors).with(1,3).and_return([[0, 2], [0, 3], [1, 2], [2, 2], [2, 3]])
+      allow(board).to receive(:get_neighbors).with(2,0).and_return([[1, 0], [1, 1], [2, 1], [3, 0], [3, 1]])
+      allow(board).to receive(:get_neighbors).with(2,1).and_return([[1, 0], [1, 1], [1, 2], [2, 0], [2, 2], [3, 0], [3, 1], [3, 2]])
+      allow(board).to receive(:get_neighbors).with(2,2).and_return([[1, 1], [1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2], [3, 3]])
+      allow(board).to receive(:get_neighbors).with(2,3).and_return([[1, 2], [1, 3], [2, 2], [3, 2], [3, 3]])
+      allow(board).to receive(:get_neighbors).with(3,0).and_return([[2, 0], [2, 1], [3, 1]])
+      allow(board).to receive(:get_neighbors).with(3,1).and_return([[2, 0], [2, 1], [2, 2], [3, 0], [3, 2]])
+      allow(board).to receive(:get_neighbors).with(3,2).and_return([[2, 1], [2, 2], [2, 3], [3, 1], [3, 3]])
+      allow(board).to receive(:get_neighbors).with(3,3).and_return([[2, 2], [2, 3], [3, 2]])
+
+      boggle = Boggle.new(board, trie)
+      expect(boggle.solve).to eq(["aecok", "cod", "bob"])
 
     end
 

@@ -1,11 +1,12 @@
 require 'rails_helper'
+require 'pry'
 RSpec.describe Board, type: :lib do
 
   subject { Board.new('AERTSDEFRTHYUJKM') }
 
-  describe "#build" do
-    it "should build a board" do
-      expect(subject.build).to eq([["A", "E", "R", "T"], ["S", "D", "E", "F"], ["R", "T", "H", "Y"], ["U", "J", "K", "M"]])
+  describe "#board" do
+    it "should generate a board" do
+      expect(subject.board).to eq([["A", "E", "R", "T"], ["S", "D", "E", "F"], ["R", "T", "H", "Y"], ["U", "J", "K", "M"]])
     end
   end
 

@@ -1,13 +1,12 @@
 #http://learnruby.com/boggle/
 class Board
+  attr_reader :b_string, :board
 
   def initialize(b_string)
     @b_string = b_string
+    @board =  b_string.chars.each_slice(4).map {|row| row}
   end
 
-  def build
-    @b_string.chars.each_slice(4).map {|row| row}
-  end
 
   def get_neighbors(row, col)
     n = []
