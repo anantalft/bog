@@ -1,5 +1,4 @@
 #http://learnruby.com/boggle/
-require 'pry'
 class Board
   attr_reader :b_string, :board
 
