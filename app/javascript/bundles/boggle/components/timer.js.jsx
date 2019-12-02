@@ -38,7 +38,7 @@ export default class Timer extends Component {
     const { minutes, seconds } = this.state
     return (
     <div>
-      <p>Time Remaining: {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</p>
+      <p><b>Time Remaining:</b> {minutes}:{seconds < 10 ? `0${seconds}` : seconds}</p>
     </div>
     )
   }

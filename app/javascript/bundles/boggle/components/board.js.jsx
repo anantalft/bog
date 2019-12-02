@@ -16,6 +16,7 @@ export default class Board extends React.Component {
     }
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleTimer = this.handleTimer.bind(this);
+    this.handleReloadClick = this.handleReloadClick.bind(this);
   }
 
   handleTextChange(e, input_field) {
@@ -39,6 +40,10 @@ export default class Board extends React.Component {
       this.setState({timer: false})
   }
 
+  handleReloadClick(){
+    window.location.reload();
+  }
+
   render() {
     const boardRows = this.props.board.map((board_row, i) => (
     <BoardRow key={i} board_row={board_row}/>
@@ -48,38 +53,32 @@ export default class Board extends React.Component {
     let message;
 
     if (isAllWords.length == this.props.valid_words.length && this.props.valid_words.length > 0 ){
-       //this.setState({timer: false});
       message = <div>Congratulations.Reload page to play again.</div>
     }else {
       if (this.state.timer){
-        message = <div>Continue playing ...</div>
+        message = <div>
+          <p>Please find {this.props.valid_words.length} words from board.</p>
+          <p style={{color:"green"}}> {this.state.desc} </p>
+        </div>
       }else{
-        message = <div>Times Up. Reload page to play again.</div>
+        message = <div>Times Up. Reload page to play again. <p><b>Valid words:</b> {this.props.valid_words.join(",")} </p></div>
       }
 
     }
 
     return (
     <div>
-
+      <button onClick={this.handleReloadClick.bind(this)}>
+        Reload
+      </button>
       <div>
         <Timer handleTimer={this.handleTimer.bind(this)}/>
       </div>
 
-      <div>
-        {
-          this.state.timer ? <p>Please find {this.props.valid_words.length} words from board.</p> :
-          <p>Valid words: {this.props.valid_words.join(",")} </p>
+      <p>Valid words:{this.props.valid_words.join(",")} </p>
 
-        }
-      </div>
-
+      <div><b>Score: </b> {this.state.score}</div>
       {message}
-      <p>Valid words: {this.props.valid_words.join(",")} </p>
-      <div>Score: {this.state.score}</div>
-
-      <div>{(this.state.timer===true) ? <p style={{color:"green"}}> {this.state.desc} </p>: ""}</div>
-
       <table border="1">
         <tbody>
         <tr>
