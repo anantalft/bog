@@ -30,14 +30,6 @@ export default class Boggle extends React.Component {
     return (
     <div>
       <div>
-      </div>
-      <div>
-        <input type="button" value="Refresh"/>
-      </div>
-      <div>
-        Valid words: {this.state.valid_words.join(",")}
-      </div>
-      <div>
         <Board board={this.state.board} valid_words={this.state.valid_words}/>
       </div>
     </div>

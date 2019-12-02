@@ -2,6 +2,7 @@ import React from 'react'
 import {BoardRow} from "./board_row.js.jsx";
 import WordArea from "./word_area.js";
 import InputForm from "./input_form.js";
+import Timer from "./timer.js";
 
 export default class Board extends React.Component {
 
@@ -9,9 +10,12 @@ export default class Board extends React.Component {
     super(props)
     this.state = {
       words: [],
-      desc: ''
+      desc: '',
+      score: 0,
+      timer: true
     }
     this.handleTextChange = this.handleTextChange.bind(this);
+    this.handleTimer = this.handleTimer.bind(this);
   }
 
   handleTextChange(e, input_text) {
@@ -20,11 +24,18 @@ export default class Board extends React.Component {
         if (!(this.state.words.indexOf(input_text) > -1)){
           this.setState({words: this.state.words.concat(input_text)})
           this.setState({desc: 'Valid word'})
+          this.setState({score: this.state.score + input_text.length})
         }
       } else {
         this.setState({desc: 'Invalid word. Try again'})
       }
     }
+  }
+
+
+  handleTimer(timer){
+    if(!timer)
+      this.setState({timer: false})
   }
 
   render() {
@@ -36,16 +47,37 @@ export default class Board extends React.Component {
     let message;
 
     if (isAllWords.length == this.props.valid_words.length){
-      message = <div>Congratulations. Please reload to play again.</div>
+      message = <div>Congratulations.Reload page to play again.</div>
     }else {
-      message = <div>Continue playing ...</div>
+      if (this.state.timer){
+        message = <div>Continue playing ...</div>
+      }else{
+        message = <div>Times Up. Reload page to play again.</div>
+      }
+
     }
 
-    return (<div>
-      <div>Please find {this.props.valid_words.length} words from board.</div>
+    return (
+    <div>
+
+      <div>
+        <Timer handleTimer={this.handleTimer.bind(this)}/>
+      </div>
+
+      <div>
+        {
+          this.state.timer ? <p>Please find {this.props.valid_words.length} words from board.</p> :
+          <p>Valid words: {this.props.valid_words.join(",")} </p>
+
+        }
+      </div>
+
       {message}
-      <div>Score: 0</div>
-      <div>{this.state.desc}</div>
+
+      <div>Score: {this.state.score}</div>
+
+      <div>{this.state.timer===true ? this.state.desc: ""}</div>
+
       <table border="1">
         <tbody>
         <tr>
@@ -54,8 +86,9 @@ export default class Board extends React.Component {
             <table border="1">
               <tbody>
               <tr>
-                <td colSpan="4"><InputForm
-                handleTextChange={this.handleTextChange.bind(this)}/></td>
+                <td colSpan="4">
+                  <InputForm timer={this.state.timer} handleTextChange={this.handleTextChange.bind(this)}/>
+                </td>
               </tr>
               {boardRows}
               </tbody>
@@ -67,6 +100,7 @@ export default class Board extends React.Component {
         </tr>
         </tbody>
       </table>
+
     </div>)
   }
 }
