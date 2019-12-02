@@ -18,17 +18,18 @@ export default class Board extends React.Component {
     this.handleTimer = this.handleTimer.bind(this);
   }
 
-  handleTextChange(e, input_text) {
+  handleTextChange(e, input_field) {
     if (e.key === 'Enter') {
-      if (this.props.valid_words.indexOf(input_text) > -1) {
-        if (!(this.state.words.indexOf(input_text) > -1)){
-          this.setState({words: this.state.words.concat(input_text)})
+      if (this.props.valid_words.indexOf(input_field.value) > -1) {
+        if (!(this.state.words.indexOf(input_field.value) > -1)){
+          this.setState({words: this.state.words.concat(input_field.value)})
           this.setState({desc: 'Valid word'})
-          this.setState({score: this.state.score + input_text.length})
+          this.setState({score: this.state.score + input_field.value.length})
         }
       } else {
         this.setState({desc: 'Invalid word. Try again'})
       }
+      input_field.value = '';
     }
   }
 
@@ -39,14 +40,15 @@ export default class Board extends React.Component {
   }
 
   render() {
-    const boardRows = this.props.board.map((board_row) => (
-    <BoardRow board_row={board_row}/>
+    const boardRows = this.props.board.map((board_row, i) => (
+    <BoardRow key={i} board_row={board_row}/>
     ));
 
     const isAllWords = this.state.words;
     let message;
 
-    if (isAllWords.length == this.props.valid_words.length){
+    if (isAllWords.length == this.props.valid_words.length && this.props.valid_words.length > 0 ){
+       //this.setState({timer: false});
       message = <div>Congratulations.Reload page to play again.</div>
     }else {
       if (this.state.timer){
@@ -73,10 +75,10 @@ export default class Board extends React.Component {
       </div>
 
       {message}
-
+      <p>Valid words: {this.props.valid_words.join(",")} </p>
       <div>Score: {this.state.score}</div>
 
-      <div>{this.state.timer===true ? this.state.desc: ""}</div>
+      <div>{(this.state.timer===true) ? <p style={{color:"green"}}> {this.state.desc} </p>: ""}</div>
 
       <table border="1">
         <tbody>

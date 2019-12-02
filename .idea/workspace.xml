@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e307ad2-3af2-4645-9347-49dbfdadf377" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lib/board.rb" afterPath="$PROJECT_DIR$/lib/board.rb" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx" afterPath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/board_row.js.jsx" afterPath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/board_row.js.jsx" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/input_form.js.jsx" afterPath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/input_form.js.jsx" />
+      <change beforePath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/word_area.js.jsx" afterPath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/word_area.js.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -39,11 +43,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="boggles_controller.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="boggles_controller.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/boggles_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="468">
               <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="board.js.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="43" column="10" lean-forward="false" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="board_row.js.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/board_row.js.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="word_area.js.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/word_area.js.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input_form.js.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/input_form.js.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="timer.js.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/timer.js.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -98,12 +152,14 @@
         <option value="$PROJECT_DIR$/lib/boggle.rb" />
         <option value="$PROJECT_DIR$/spec/lib/boggle_spec.rb" />
         <option value="$PROJECT_DIR$/app/javascript/bundles/boggle/components/boggle.js.jsx" />
-        <option value="$PROJECT_DIR$/app/javascript/bundles/boggle/components/input_form.js.jsx" />
-        <option value="$PROJECT_DIR$/app/javascript/bundles/boggle/components/timer.js.jsx" />
-        <option value="$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/boggles_controller.rb" />
         <option value="$PROJECT_DIR$/spec/lib/board_spec.rb" />
         <option value="$PROJECT_DIR$/lib/board.rb" />
+        <option value="$PROJECT_DIR$/app/javascript/bundles/boggle/components/timer.js.jsx" />
+        <option value="$PROJECT_DIR$/app/javascript/bundles/boggle/components/input_form.js.jsx" />
+        <option value="$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx" />
+        <option value="$PROJECT_DIR$/app/javascript/bundles/boggle/components/board_row.js.jsx" />
+        <option value="$PROJECT_DIR$/app/javascript/bundles/boggle/components/word_area.js.jsx" />
       </list>
     </option>
   </component>
@@ -151,6 +207,36 @@
               <item name="bog" type="b2602c69:ProjectViewProjectNode" />
               <item name="bog" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bog" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bog" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="bundles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bog" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="bundles" type="462c0819:PsiDirectoryNode" />
+              <item name="boggle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bog" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="javascript" type="462c0819:PsiDirectoryNode" />
+              <item name="bundles" type="462c0819:PsiDirectoryNode" />
+              <item name="boggle" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bog" type="b2602c69:ProjectViewProjectNode" />
@@ -240,7 +326,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64595000" />
+    <option name="totallyTimeSpent" value="68323000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -297,13 +383,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -558,6 +637,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -575,40 +655,6 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/word_area.js.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/input_form.js.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/timer.js.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="26" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="72" column="12" lean-forward="false" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -659,6 +705,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/timer.js.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/input_form.js.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="43" column="10" lean-forward="false" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/board_row.js.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/word_area.js.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>

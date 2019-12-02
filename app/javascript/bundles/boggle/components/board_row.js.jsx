@@ -1,9 +1,9 @@
 import React from 'react'
 export const BoardRow = (props) => {
   // let urlParams = new URLSearchParams(window.location.search);
-  var alphabets = props.board_row.map((alphabet) => {
+  var alphabets = props.board_row.map((alphabet, i) => {
     return(
-     <td>{alphabet}</td>
+     <td key={i}>{alphabet}</td>
     )
   })
 
