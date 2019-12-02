@@ -1,4 +1,5 @@
 require 'boggle'
+require 'trie'
 class Api::V1::BogglesController < ApplicationController
 
   def index
