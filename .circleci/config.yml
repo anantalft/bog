@@ -49,7 +49,11 @@ jobs:
       - run:
           name: run rspec
           command: bundle exec rspec
+      - run:
+          name: Code Climate Test Coverage
+          command: ./cc-test-reporter format-coverage -t simplecov -o "coverage/codeclimate.$CIRCLE_NODE_INDEX.json"
 
+      
       # collect reports
       - store_test_results:
           path: coverage
