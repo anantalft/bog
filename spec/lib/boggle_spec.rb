@@ -28,7 +28,8 @@ RSpec.describe Boggle, type: :lib do
       allow(board).to receive(:get_neighbors).with(3,3).and_return([[2, 2], [2, 3], [3, 2]])
 
       boggle = Boggle.new(board, trie)
-      expect(boggle.solve).to eq(["aecok", "cod", "bob"])
+      boggle.solve
+      expect(boggle.v_words).to eq(["aecok", "cod", "bob"])
 
     end
 

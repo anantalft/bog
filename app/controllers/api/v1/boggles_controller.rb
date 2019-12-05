@@ -20,7 +20,7 @@ class Api::V1::BogglesController < ApplicationController
     trie.build_dictionary_from(file_path)
 
     @boggle = Boggle.new(board,trie)
-    @valid_words = @boggle.solve
+    @boggle.solve
   end
 
 end
