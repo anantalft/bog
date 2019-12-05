@@ -24,3 +24,4 @@ class Api::V1::BogglesController < ApplicationController
   end
 
 end
+
