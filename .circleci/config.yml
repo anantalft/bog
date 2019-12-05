@@ -5,6 +5,7 @@
 version: 2
 jobs:
   build:
+    CC_TEST_REPORTER_ID: 2006b2bd0498da9276aa34c6084b628a7bad8693c6650835f23663cc14db3d99
     docker:
       # specify the version you desire here
       - image: circleci/ruby:2.4.1-node-browsers
@@ -49,11 +50,28 @@ jobs:
       - run:
           name: run rspec
           command: bundle exec rspec
-      - run:
-          name: Code Climate Test Coverage
-          command: ./cc-test-reporter format-coverage -t simplecov -o "coverage/codeclimate.$CIRCLE_NODE_INDEX.json"
 
-      
+      - run:
+          name: Setup dependencies
+          command: |
+            sudo composer self-update
+            composer install -n --prefer-dist
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+          # download test reporter as a static binary
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          name: Run tests
+          command: |
+            sudo docker-php-ext-enable xdebug
+          # notify Code Climate of a pending test report using `before-build`
+            ./cc-test-reporter before-build
+            sudo vendor/bin/phpunit --coverage-clover clover.xml
+          # upload test report to Code Climate using `after-build`
+            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
+
       # collect reports
       - store_test_results:
           path: coverage
