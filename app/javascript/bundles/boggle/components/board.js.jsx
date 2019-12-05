@@ -22,12 +22,12 @@ export default class Board extends React.Component {
 
   handleTextChange(e, input_field) {
     if (e.key === 'Enter') {
-      if (this.props.valid_words.indexOf(input_field.value) > -1) {
-        if (!(this.state.words.indexOf(input_field.value) > -1)) {
-          this.setState({words: this.state.words.concat(input_field.value)})
-          this.setState({desc: 'Valid word'})
-          this.setState({score: this.state.score + input_field.value.length})
-        }
+      if ((this.props.valid_words.indexOf(input_field.value) > -1) && !(this.state.words.indexOf(input_field.value) > -1)) {
+          this.setState({
+            words: this.state.words.concat(input_field.value),
+            desc: "Valid word",
+            score: this.state.score + input_field.value.length
+          })
       } else {
         this.setState({desc: 'Invalid word. Try again'})
       }
@@ -51,15 +51,11 @@ export default class Board extends React.Component {
 
     return (
     <div>
-      <button onClick={this.handleReloadClick.bind(this)}>
-        Reload
-      </button>
+      <button onClick={this.handleReloadClick.bind(this)}>Reload</button>
       <div>
         <Timer handleTimer={this.handleTimer.bind(this)}/>
       </div>
-
       <p>Valid words:{this.props.valid_words.join(",")} </p>
-
       <div><b>Score: </b> {this.state.score}</div>
 
       <Message input_words={this.state.words} valid_words={this.props.valid_words} timer={this.state.timer} desc={this.state.desc}/>
