@@ -9,22 +9,20 @@ export default class Timer extends Component {
 
   componentDidMount() {
     this.myInterval = setInterval(() => {
-      const { seconds, minutes } = this.state
+      const { seconds, minutes } = this.state;
 
       if (seconds > 0) {
-        this.setState(({ seconds }) => ({
-          seconds: seconds - 1
-        }))
+        this.setState( {seconds: seconds - 1 })
       }
       if (seconds === 0) {
         if (minutes === 0) {
           clearInterval(this.myInterval)
           this.props.handleTimer(false);
         } else {
-          this.setState(({ minutes }) => ({
+          this.setState({
             minutes: minutes - 1,
             seconds: 59
-          }))
+          })
         }
       }
     }, 1000)
