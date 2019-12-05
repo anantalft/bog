@@ -1,5 +1,9 @@
 [![CircleCI](https://circleci.com/gh/anantalft/bog/tree/master.svg?style=svg)](https://circleci.com/gh/anantalft/bog/tree/master)
 
+<a href="https://codeclimate.com/github/anantalft/bog/maintainability"><img src="https://api.codeclimate.com/v1/badges/6dc9bb6b41f96cbbc28c/maintainability" /></a>
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/6dc9bb6b41f96cbbc28c/test_coverage)](https://codeclimate.com/github/anantalft/bog/test_coverage)
+
 # Boggle
 
 Demo url: https://ananta-boggle.herokuapp.com/
