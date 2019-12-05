@@ -3,6 +3,7 @@ import {BoardRow} from "./board_row.js.jsx";
 import WordArea from "./word_area.js";
 import InputForm from "./input_form.js";
 import Timer from "./timer.js";
+import Message from "./message.js";
 
 export default class Board extends React.Component {
 
@@ -48,23 +49,6 @@ export default class Board extends React.Component {
     <BoardRow key={i} board_row={board_row}/>
     ));
 
-    const isAllWords = this.state.words;
-    let message;
-
-    if (isAllWords.length == this.props.valid_words.length && this.props.valid_words.length > 0) {
-      message = <div style={{color: "green"}}><p>Congratulations. Reload page to play again.</p></div>
-    } else {
-      if (this.state.timer) {
-        message = <div>
-          <p>Please find {this.props.valid_words.length} words from board.</p>
-          <p style={{color: "green"}}> {this.state.desc} </p>
-        </div>
-      } else {
-        message = <div><p style={{color:"red"}}>Times Up. Reload page to play again.</p> <p><b>Valid
-          words:</b> {this.props.valid_words.join(",")} </p></div>
-      }
-    }
-
     return (
     <div>
       <button onClick={this.handleReloadClick.bind(this)}>
@@ -77,7 +61,9 @@ export default class Board extends React.Component {
       <p>Valid words:{this.props.valid_words.join(",")} </p>
 
       <div><b>Score: </b> {this.state.score}</div>
-      {message}
+
+      <Message input_words={this.state.words} valid_words={this.props.valid_words} timer={this.state.timer} desc={this.state.desc}/>
+
       <table border="1">
         <tbody>
         <tr>
