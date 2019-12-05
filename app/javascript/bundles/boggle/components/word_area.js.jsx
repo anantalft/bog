@@ -10,7 +10,10 @@ export default class WordArea extends React.Component {
 
     return (
     <div>
+    <b>List of valid inputs</b>
+    <div>
       {words}
+    </div>
     </div>
     )
   }

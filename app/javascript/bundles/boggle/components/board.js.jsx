@@ -52,25 +52,17 @@ export default class Board extends React.Component {
     return (
     <div>
       <button onClick={this.handleReloadClick.bind(this)}>Reload</button>
-      <div>
-        <Timer handleTimer={this.handleTimer.bind(this)}/>
-      </div>
-      <p>Valid words:{this.props.valid_words.join(",")} </p>
-      <div><b>Score: </b> {this.state.score}</div>
-
-      <Message input_words={this.state.words} valid_words={this.props.valid_words} timer={this.state.timer} desc={this.state.desc}/>
-
+      <div><Timer handleTimer={this.handleTimer.bind(this)}/></div>
+      <Message input_words={this.state.words} valid_words={this.props.valid_words} timer={this.state.timer} desc={this.state.desc} score={this.state.score}/>
       <table border="1">
         <tbody>
-        <tr>
-          <td width="50%" valign="top">
+        <tr><td width="50%" valign="top">
             <b>Board</b>
             <table border="1">
               <tbody>
               <tr>
                 <td colSpan="4">
-                  <InputForm timer={this.state.timer}
-                             handleTextChange={this.handleTextChange.bind(this)}/>
+                  <InputForm timer={this.state.timer} handleTextChange={this.handleTextChange.bind(this)}/>
                 </td>
               </tr>
               {boardRows}
@@ -78,13 +70,11 @@ export default class Board extends React.Component {
             </table>
           </td>
           <td width="50%" valign="top">
-            <b>List of valid inputs</b>
             <WordArea words={this.state.words}/>
           </td>
         </tr>
         </tbody>
       </table>
-
     </div>)
   }
 }

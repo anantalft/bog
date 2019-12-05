@@ -19,7 +19,9 @@ export default class Message extends React.Component {
 
     return (
     <div>
-    {message}
+      <p>Valid words:{this.props.valid_words.join(",")} </p>
+      <div><b>Score: </b> {this.props.score}</div>
+     {message}
     </div>
     )
   }
