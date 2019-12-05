@@ -46,8 +46,7 @@ export default class Board extends React.Component {
 
   render() {
     const boardRows = this.props.board.map((board_row, i) => (
-    <BoardRow key={i} board_row={board_row}/>
-    ));
+    <BoardRow key={i} board_row={board_row}/> ));
 
     return (
     <div>
@@ -57,21 +56,15 @@ export default class Board extends React.Component {
       <table border="1">
         <tbody>
         <tr><td width="50%" valign="top">
-            <b>Board</b>
             <table border="1">
-              <tbody>
-              <tr>
-                <td colSpan="4">
+              <tbody><tr><td colSpan="4">
                   <InputForm timer={this.state.timer} handleTextChange={this.handleTextChange.bind(this)}/>
-                </td>
-              </tr>
+                </td></tr>
               {boardRows}
               </tbody>
             </table>
           </td>
-          <td width="50%" valign="top">
-            <WordArea words={this.state.words}/>
-          </td>
+          <td width="50%" valign="top"> <WordArea words={this.state.words}/></td>
         </tr>
         </tbody>
       </table>

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0e307ad2-3af2-4645-9347-49dbfdadf377" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx" afterPath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/message.js.jsx" afterPath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/message.js.jsx" />
-      <change beforePath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/word_area.js.jsx" afterPath="$PROJECT_DIR$/app/javascript/bundles/boggle/components/word_area.js.jsx" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -44,8 +42,8 @@
       <file leaf-file-name="board.js.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="76" column="14" lean-forward="false" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+            <state relative-caret-position="126">
+              <caret line="40" column="3" lean-forward="true" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -332,12 +330,12 @@
       <workItem from="1575268662468" duration="4553000" />
       <workItem from="1575531840438" duration="6966000" />
       <workItem from="1575550725735" duration="3051000" />
-      <workItem from="1575558874499" duration="6452000" />
+      <workItem from="1575558874499" duration="6937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90892000" />
+    <option name="totallyTimeSpent" value="91377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -750,8 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/bundles/boggle/components/board.js.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="76" column="14" lean-forward="false" selection-start-line="76" selection-start-column="14" selection-end-line="76" selection-end-column="14" />
+        <state relative-caret-position="126">
+          <caret line="40" column="3" lean-forward="true" selection-start-line="40" selection-start-column="3" selection-end-line="40" selection-end-column="3" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
