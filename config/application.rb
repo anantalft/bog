@@ -1,6 +1,17 @@
 require_relative 'boot'
+#https://stackoverflow.com/questions/821251/how-to-configure-ruby-on-rails-with-no-database
+# require 'rails/all'
+#
+require "active_model/railtie"
+# And now the rest
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "action_view/railtie"
+require "action_cable/engine" # Only for Rails >= 5.0
+require "active_storage/engine" # Only for Rails >= 5.2
+require "sprockets/railtie"
+require "rails/test_unit/railtie"
 
-require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
