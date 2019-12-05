@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/anantalft/bog/tree/master.svg?style=svg)](https://circleci.com/gh/anantalft/bog/tree/master)
+
 # Boggle
 
 Demo url: https://ananta-boggle.herokuapp.com/
