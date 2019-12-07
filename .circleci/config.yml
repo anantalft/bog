@@ -49,7 +49,7 @@ jobs:
       - run:
           name: run rspec
           command: bundle exec rspec
-          
+
 
       # collect reports
       - store_test_results:
