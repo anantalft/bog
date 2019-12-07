@@ -39,3 +39,5 @@ yarn-debug.log*
 /.idea
 .idea/workspace.xml
 .idea/bog.iml
+coverage
+/coverage

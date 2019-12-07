@@ -3,7 +3,7 @@ import React from 'react'
 export default class InputForm extends React.Component {
 
   onKeyPress(e){
-    this.props.handleTextChange(e,this.refs.filterTextInput.value)
+    this.props.handleTextChange(e,this.refs.filterTextInput)
   }
 
   componentDidMount(){

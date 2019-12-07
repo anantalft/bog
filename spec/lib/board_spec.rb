@@ -2,11 +2,13 @@ require 'rails_helper'
 require 'pry'
 RSpec.describe Board, type: :lib do
 
-  subject { Board.new('AERTSDEFRTHYUJKM') }
+  subject { Board.new }
 
   describe "#board" do
     it "should generate a board" do
-      expect(subject.board).to eq([["A", "E", "R", "T"], ["S", "D", "E", "F"], ["R", "T", "H", "Y"], ["U", "J", "K", "M"]])
+      b_string = subject.b_string
+      board = b_string.join.chars.each_slice(4).map {|row| row}
+      expect(subject.board).to eq(board)
     end
   end
 

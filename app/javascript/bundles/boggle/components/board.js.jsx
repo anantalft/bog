@@ -3,6 +3,7 @@ import {BoardRow} from "./board_row.js.jsx";
 import WordArea from "./word_area.js";
 import InputForm from "./input_form.js";
 import Timer from "./timer.js";
+import Message from "./message.js";
 
 export default class Board extends React.Component {
 
@@ -16,91 +17,57 @@ export default class Board extends React.Component {
     }
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleTimer = this.handleTimer.bind(this);
+    this.handleReloadClick = this.handleReloadClick.bind(this);
   }
 
-  handleTextChange(e, input_text) {
+  handleTextChange(e, input_field) {
     if (e.key === 'Enter') {
-      if (this.props.valid_words.indexOf(input_text) > -1) {
-        if (!(this.state.words.indexOf(input_text) > -1)){
-          this.setState({words: this.state.words.concat(input_text)})
-          this.setState({desc: 'Valid word'})
-          this.setState({score: this.state.score + input_text.length})
-        }
+      if ((this.props.valid_words.indexOf(input_field.value) > -1) && !(this.state.words.indexOf(input_field.value) > -1)) {
+          this.setState({
+            words: this.state.words.concat(input_field.value),
+            desc: "Valid word",
+            score: this.state.score + input_field.value.length
+          })
       } else {
         this.setState({desc: 'Invalid word. Try again'})
       }
+      input_field.value = '';
     }
   }
 
-
-  handleTimer(timer){
-    if(!timer)
+  handleTimer(timer) {
+    if (!timer)
       this.setState({timer: false})
   }
 
+  handleReloadClick() {
+    window.location.reload();
+  }
+
   render() {
-    const boardRows = this.props.board.map((board_row) => (
-    <BoardRow board_row={board_row}/>
-    ));
-
-    const isAllWords = this.state.words;
-    let message;
-
-    if (isAllWords.length == this.props.valid_words.length){
-      message = <div>Congratulations.Reload page to play again.</div>
-    }else {
-      if (this.state.timer){
-        message = <div>Continue playing ...</div>
-      }else{
-        message = <div>Times Up. Reload page to play again.</div>
-      }
-
-    }
+    const boardRows = this.props.board.map((board_row, i) => (
+    <BoardRow key={i} board_row={board_row}/> ));
 
     return (
     <div>
-
-      <div>
-        <Timer handleTimer={this.handleTimer.bind(this)}/>
-      </div>
-
-      <div>
-        {
-          this.state.timer ? <p>Please find {this.props.valid_words.length} words from board.</p> :
-          <p>Valid words: {this.props.valid_words.join(",")} </p>
-
-        }
-      </div>
-
-      {message}
-
-      <div>Score: {this.state.score}</div>
-
-      <div>{this.state.timer===true ? this.state.desc: ""}</div>
-
+      <button onClick={this.handleReloadClick.bind(this)}>Reload</button>
+      <div><Timer handleTimer={this.handleTimer.bind(this)}/></div>
+      <Message input_words={this.state.words} valid_words={this.props.valid_words} timer={this.state.timer} desc={this.state.desc} score={this.state.score}/>
       <table border="1">
         <tbody>
-        <tr>
-          <td width="50%">
-            Board
+        <tr><td width="50%" valign="top">
             <table border="1">
-              <tbody>
-              <tr>
-                <td colSpan="4">
+              <tbody><tr><td colSpan="4">
                   <InputForm timer={this.state.timer} handleTextChange={this.handleTextChange.bind(this)}/>
-                </td>
-              </tr>
+                </td></tr>
               {boardRows}
               </tbody>
             </table>
           </td>
-          <td width="50%">
-            <WordArea words={this.state.words}/>
-          </td>
+          <td width="50%" valign="top"> <WordArea words={this.state.words}/></td>
         </tr>
         </tbody>
       </table>
-
     </div>)
   }
 }

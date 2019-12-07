@@ -1,4 +1,5 @@
 require 'boggle'
+require 'trie'
 class Api::V1::BogglesController < ApplicationController
 
   def index
@@ -11,15 +12,21 @@ class Api::V1::BogglesController < ApplicationController
   private
   def solve_boggle
 
-    board_string = (0...16).map { (65 + rand(26)).chr }.join
-    board = Board.new(board_string)
+   # board_string = (0...16).map { (65 + rand(26)).chr }.join
+    board = Board.new
 
-    trie = Trie.new
-    file_path = "#{Rails.root}/files/letterpress_en_dictionary.txt"
-    trie.build_dictionary_from(file_path)
+    if session[:trie]
+     trie = session[:trie]
+    else
+      trie = Trie.new
+      file_path = "#{Rails.root}/files/letterpress_en_dictionary.txt"
+      trie.build_dictionary_from(file_path)
+      session[:trie] = trie
+    end
 
     @boggle = Boggle.new(board,trie)
-    @valid_words = @boggle.solve
+    @boggle.solve
   end
 
 end
+
