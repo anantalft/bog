@@ -22,11 +22,12 @@ export default class Board extends React.Component {
 
   handleTextChange(e, input_field) {
     if (e.key === 'Enter') {
-      if ((this.props.valid_words.indexOf(input_field.value) > -1) && !(this.state.words.indexOf(input_field.value) > -1)) {
+      var input_field_value = input_field.value.toLowerCase();
+      if ((this.props.valid_words.indexOf(input_field_value) > -1) && !(this.state.words.indexOf(input_field_value) > -1)) {
           this.setState({
-            words: this.state.words.concat(input_field.value),
+            words: this.state.words.concat(input_field_value),
             desc: "Valid word",
-            score: this.state.score + input_field.value.length
+            score: this.state.score + input_field_value.length
           })
       } else {
         this.setState({desc: 'Invalid word. Try again'})
