@@ -38,6 +38,7 @@ export default class Boggle extends React.Component {
         <div> <b>Valid words: </b> {this.state.valid_words.join(",")} </div>
       </ToggleBox>
       </div>
+      <div><i>Note: Please reload the page or start a new game if it says, "Please find 0 words from board.". This means there are no words to match. I am working on it to fix it.</i></div>
     </div>
     )
   }
