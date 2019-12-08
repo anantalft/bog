@@ -50,7 +50,7 @@ export default class Board extends React.Component {
 
     return (
     <div>
-      <button onClick={this.handleReloadClick.bind(this)}>Reload</button>
+      <button onClick={this.handleReloadClick.bind(this)}>Click me to start a new game</button>
       <div><Timer handleTimer={this.handleTimer.bind(this)}/></div>
       <Message input_words={this.state.words} valid_words={this.props.valid_words} timer={this.state.timer} desc={this.state.desc} score={this.state.score}/>
       <table border="1">

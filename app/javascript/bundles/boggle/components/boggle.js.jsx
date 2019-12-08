@@ -1,5 +1,6 @@
 import React from 'react'
 import Board from "./board.js";
+import ToggleBox from "./toggle_box.js";
 
 export default class Boggle extends React.Component {
   constructor(props) {
@@ -31,6 +32,11 @@ export default class Boggle extends React.Component {
     <div>
       <div>
         <Board board={this.state.board} valid_words={this.state.valid_words}/>
+      </div>
+      <div><br/>
+      <ToggleBox title="Show all valid words">
+        <div> <b>Valid words: </b> {this.state.valid_words.join(",")} </div>
+      </ToggleBox>
       </div>
     </div>
     )

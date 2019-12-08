@@ -13,13 +13,12 @@ export default class Message extends React.Component {
         <p style={{color: "green"}}> {this.props.desc} </p>
       </div>
     }else{
-      message = <div><p style={{color:"red"}}>Times Up. Reload page to play again.</p> <p><b>Valid
-        words:</b> {this.props.valid_words.join(",")} </p></div>
+      message = <div><p style={{color:"red"}}>Times Up. Reload page to play again.</p>
+      </div>
     }
 
     return (
     <div>
-      <p>Valid words:{this.props.valid_words.join(",")} </p>
       <div><b>Score: </b> {this.props.score}</div>
      {message}
     </div>
