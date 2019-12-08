@@ -1,4 +1,6 @@
 #Ref:  https://stackoverflow.com/questions/9042426/explanation-of-ruby-code-for-building-trie-data-structures
+#
+require 'pry'
 class Trie < Hash
   def initialize
     # Ensure that this is not a special Hash by disallowing
@@ -18,10 +20,9 @@ class Trie < Hash
     words = []
     File.open(file_path) do |file|
       file.each do |line|
-        words<<line.strip
+        words<<line.strip if line.length > 2
       end
     end
-
     self.build(words)
 
     return self

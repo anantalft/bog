@@ -14,12 +14,12 @@ class Api::V1::BogglesController < ApplicationController
 
    # board_string = (0...16).map { (65 + rand(26)).chr }.join
     board = Board.new
-
+   # session[:trie] = ""
     if session[:trie]
      trie = session[:trie]
     else
       trie = Trie.new
-      file_path = "#{Rails.root}/files/letterpress_en_dictionary.txt"
+      file_path = "#{Rails.root}/files/words.txt"
       trie.build_dictionary_from(file_path)
       session[:trie] = trie
     end
