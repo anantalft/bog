@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-12-09T13:30:39+05:45">2019-12-09T13:30:39+05:45</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-12-09T15:10:09+05:45">2019-12-09T15:10:09+05:45</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         9.41
+         432.78
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>5</b> files in total.
-    <b>96</b> relevant lines. 
-    <span class="green"><b>96</b> lines covered</span> and
+    <b>8</b> files in total.
+    <b>132</b> relevant lines. 
+    <span class="green"><b>132</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -51,13 +51,33 @@
     <tbody>
       
       <tr>
+        <td class="strong"><a href="#0d38f68e1d83cbb965cb0ce49154d435709dbf19" class="src_link" title="app/controllers/api/v1/boggles_controller.rb">app/controllers/api/v1/boggles_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>33</td>
+        <td>19</td>
+        <td>19</td>
+        <td>0</td>
+        <td>1.6</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#537167a09b2626f28c80b3540c3e6cd8318819d6" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>2</td>
+        <td>1</td>
+        <td>1</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#5aa38a14ba8dab7ef65abf63ea08d75d7bcffe31" class="src_link" title="lib/board.rb">lib/board.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>55</td>
         <td>19</td>
         <td>19</td>
         <td>0</td>
-        <td>14.1</td>
+        <td>183.0</td>
       </tr>
       
       <tr>
@@ -67,7 +87,7 @@
         <td>23</td>
         <td>23</td>
         <td>0</td>
-        <td>24.0</td>
+        <td>132.6</td>
       </tr>
       
       <tr>
@@ -77,7 +97,17 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>2.9</td>
+        <td>3607.3</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#6d5d8bac9ec0edeff6ba1b1f52e4fbe172b48f43" class="src_link" title="spec/lib/board_spec.rb">spec/lib/board_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>42</td>
+        <td>16</td>
+        <td>16</td>
+        <td>0</td>
+        <td>1.5</td>
       </tr>
       
       <tr>
@@ -115,6 +145,254 @@
       </div>
     
       <div class="source_files">
+      
+        <div class="source_table" id="0d38f68e1d83cbb965cb0ce49154d435709dbf19">
+  <div class="header">
+    <h3>app/controllers/api/v1/boggles_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;boggle&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;trie&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Api::V1::BogglesController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    solve_boggle</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def solve_boggle</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if !session[:trie]</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="16">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      trie = Trie.new</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      file_path = &quot;#{Rails.root}/files/words.txt&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="18">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      trie.build_dictionary_from(file_path)</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      session[:trie] = trie</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="22">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    @v_words = []</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="24">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    while @v_words.length &lt;1</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="25">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      board = Board.new</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="26">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      @boggle = Boggle.new(board,session[:trie])</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="27">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      @boggle.solve</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="28">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      @v_words = @boggle.v_words.uniq</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="537167a09b2626f28c80b3540c3e6cd8318819d6">
+  <div class="header">
+    <h3>app/controllers/application_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>1</b> relevant lines. 
+      <span class="green"><b>1</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class ApplicationController &lt; ActionController::Base</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
       
         <div class="source_table" id="5aa38a14ba8dab7ef65abf63ea08d75d7bcffe31">
   <div class="header">
@@ -268,26 +546,26 @@
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="68" data-linenumber="24">
-          <span class="hits">68</span>
+        <li class="covered" data-hits="102" data-linenumber="24">
+          <span class="hits">102</span>
           
           <code class="ruby">    indices = (0...Die.size).to_a.sort_by { rand }</code>
         </li>
       
-        <li class="covered" data-hits="68" data-linenumber="25">
-          <span class="hits">68</span>
+        <li class="covered" data-hits="102" data-linenumber="25">
+          <span class="hits">102</span>
           
           <code class="ruby">    b_string = Die.values_at(*indices).map { |die| die[rand(die.size)] }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="26">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="26">
+          <span class="hits">6</span>
           
           <code class="ruby">    @b_string = b_string</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="27">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="30" data-linenumber="27">
+          <span class="hits">30</span>
           
           <code class="ruby">    @board =  b_string.join.chars.each_slice(4).map {|row| row}</code>
         </li>
@@ -316,14 +594,14 @@
           <code class="ruby">  def get_neighbors(row, col)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="32">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="96" data-linenumber="32">
+          <span class="hits">96</span>
           
           <code class="ruby">    n = []</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="33">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="96" data-linenumber="33">
+          <span class="hits">96</span>
           
           <code class="ruby">    radial_offset_coords = [</code>
         </li>
@@ -358,26 +636,26 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="39">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="96" data-linenumber="39">
+          <span class="hits">96</span>
           
           <code class="ruby">    radial_offset_coords.each do |row_offset, col_offset|</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="40">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="768" data-linenumber="40">
+          <span class="hits">768</span>
           
           <code class="ruby">      try_row, try_col = row + row_offset, col + col_offset</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="41">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="768" data-linenumber="41">
+          <span class="hits">768</span>
           
           <code class="ruby">      if inbounds? try_row, try_col</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="42">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="542" data-linenumber="42">
+          <span class="hits">542</span>
           
           <code class="ruby">        n.append([try_row, try_col])</code>
         </li>
@@ -394,8 +672,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="45">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="96" data-linenumber="45">
+          <span class="hits">96</span>
           
           <code class="ruby">    n</code>
         </li>
@@ -430,8 +708,8 @@
           <code class="ruby">  def inbounds? row, col</code>
         </li>
       
-        <li class="covered" data-hits="24" data-linenumber="51">
-          <span class="hits">24</span>
+        <li class="covered" data-hits="768" data-linenumber="51">
+          <span class="hits">768</span>
           
           <code class="ruby">    row &gt;= 0 &amp;&amp; row &lt;= 3 &amp;&amp; col &gt;= 0 &amp;&amp; col &lt;= 3</code>
         </li>
@@ -509,20 +787,20 @@
           <code class="ruby">  def initialize(board, trie)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="6">
+          <span class="hits">3</span>
           
           <code class="ruby">    @board = board</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="7">
+          <span class="hits">3</span>
           
           <code class="ruby">    @trie = trie</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="8">
+          <span class="hits">3</span>
           
           <code class="ruby">    @v_words = []</code>
         </li>
@@ -551,20 +829,20 @@
           <code class="ruby">  def solve</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="13">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="13">
+          <span class="hits">3</span>
           
           <code class="ruby">    4.times do |row|</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="14">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="12" data-linenumber="14">
+          <span class="hits">12</span>
           
           <code class="ruby">      4.times do |col|</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="15">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="48" data-linenumber="15">
+          <span class="hits">48</span>
           
           <code class="ruby">        dfs([row, col], [], @trie, &#39;&#39;)</code>
         </li>
@@ -611,44 +889,44 @@
           <code class="ruby">  def dfs(row_col, visited, trie, now_word)</code>
         </li>
       
-        <li class="covered" data-hits="120" data-linenumber="23">
-          <span class="hits">120</span>
+        <li class="covered" data-hits="678" data-linenumber="23">
+          <span class="hits">678</span>
           
           <code class="ruby">    return if visited.include?([row_col[0], row_col[1]])</code>
         </li>
       
-        <li class="covered" data-hits="75" data-linenumber="24">
-          <span class="hits">75</span>
+        <li class="covered" data-hits="404" data-linenumber="24">
+          <span class="hits">404</span>
           
           <code class="ruby">    letter = @board.board[row_col[0]][row_col[1]].downcase</code>
         </li>
       
-        <li class="covered" data-hits="75" data-linenumber="25">
-          <span class="hits">75</span>
+        <li class="covered" data-hits="404" data-linenumber="25">
+          <span class="hits">404</span>
           
           <code class="ruby">    visited.append([row_col[0], row_col[1]])</code>
         </li>
       
-        <li class="covered" data-hits="75" data-linenumber="26">
-          <span class="hits">75</span>
+        <li class="covered" data-hits="404" data-linenumber="26">
+          <span class="hits">404</span>
           
           <code class="ruby">    if trie.key?(letter)</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="27">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="110" data-linenumber="27">
+          <span class="hits">110</span>
           
           <code class="ruby">      now_word += letter</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="28">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="110" data-linenumber="28">
+          <span class="hits">110</span>
           
           <code class="ruby">      if trie[letter].empty?</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="29">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="11" data-linenumber="29">
+          <span class="hits">11</span>
           
           <code class="ruby">        @v_words &lt;&lt; now_word</code>
         </li>
@@ -665,20 +943,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="32">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="110" data-linenumber="32">
+          <span class="hits">110</span>
           
           <code class="ruby">      neighbors = @board.get_neighbors(row_col[0], row_col[1])</code>
         </li>
       
-        <li class="covered" data-hits="17" data-linenumber="33">
-          <span class="hits">17</span>
+        <li class="covered" data-hits="110" data-linenumber="33">
+          <span class="hits">110</span>
           
           <code class="ruby">      neighbors.each do |r, c|</code>
         </li>
       
-        <li class="covered" data-hits="104" data-linenumber="34">
-          <span class="hits">104</span>
+        <li class="covered" data-hits="630" data-linenumber="34">
+          <span class="hits">630</span>
           
           <code class="ruby">         dfs([r, c], visited, trie[letter], now_word)</code>
         </li>
@@ -762,8 +1040,8 @@
           <code class="ruby">    # initialization options.</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="6">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="6">
+          <span class="hits">4</span>
           
           <code class="ruby">    super</code>
         </li>
@@ -786,20 +1064,20 @@
           <code class="ruby">  def build(arr_string)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="10">
+          <span class="hits">4</span>
           
           <code class="ruby">    for word in arr_string</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="11">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="6006" data-linenumber="11">
+          <span class="hits">6006</span>
           
           <code class="ruby">      word.chars.inject(self) do |h, char|</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="12">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="38466" data-linenumber="12">
+          <span class="hits">38466</span>
           
           <code class="ruby">        h[char] ||= { }</code>
         </li>
@@ -834,26 +1112,26 @@
           <code class="ruby">  def build_dictionary_from(file_path)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="18">
+          <span class="hits">3</span>
           
           <code class="ruby">    words = []</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="19">
+          <span class="hits">3</span>
           
           <code class="ruby">    File.open(file_path) do |file|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="20">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="20">
+          <span class="hits">3</span>
           
           <code class="ruby">      file.each do |line|</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="21">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="6003" data-linenumber="21">
+          <span class="hits">6003</span>
           
           <code class="ruby">        words&lt;&lt;line.strip if line.length &gt; 2</code>
         </li>
@@ -870,8 +1148,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="24">
+          <span class="hits">3</span>
           
           <code class="ruby">    self.build(words)</code>
         </li>
@@ -882,8 +1160,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="3" data-linenumber="26">
+          <span class="hits">3</span>
           
           <code class="ruby">    return self</code>
         </li>
@@ -898,6 +1176,277 @@
           
           
           <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="6d5d8bac9ec0edeff6ba1b1f52e4fbe172b48f43">
+  <div class="header">
+    <h3>spec/lib/board_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>16</b> relevant lines. 
+      <span class="green"><b>16</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;pry&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">RSpec.describe Board, type: :lib do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="5">
+          <span class="hits">5</span>
+          
+          <code class="ruby">  subject { Board.new }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;#board&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;should generate a board&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      b_string = subject.b_string</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="10">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      board = b_string.join.chars.each_slice(4).map {|row| row}</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(subject.board).to eq(board)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &quot;#get_neighbors&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;should give 3 neighbours when the data is from index row:0,col:0&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(subject.get_neighbors(0,0).count).to eq(3)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;should give 5 neighbours when the data is from index row:1,col:0&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(subject.get_neighbors(1,0).count).to eq(5)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;should give 8 neighbours when the data is from index row:1,col:1&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(subject.get_neighbors(1,1).count).to eq(8)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">  # describe &quot;#inbounds??&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">  #   it &quot;returns true when row and column is zero&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">  #     expect(subject.inbounds?(0,0)).to be true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  #   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">  #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">  #   it &quot;returns false when row or column is less than zero&quot; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  #     expect(subject.inbounds?(-1,0)).to be false</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">  #   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="39">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
         </li>
       
     </ol>
