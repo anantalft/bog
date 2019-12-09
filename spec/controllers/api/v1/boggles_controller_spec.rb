@@ -11,8 +11,8 @@ RSpec.describe Api::V1::BogglesController do
       expect(response).to have_http_status(:success)
     end
 
-    it "always returns valid words greater than 1 " do
-      expect(assigns(:v_words).length).to be >1
+    it "always returns valid words greater than 0 " do
+      expect(assigns(:v_words).length).to be > 0
     end
   end
 end
