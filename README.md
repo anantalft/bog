@@ -113,6 +113,7 @@ boggle.solve
 * Rspec for unit testing
 * Heroku for deployment
 * Postgres: *Note Trie data structure are saved in session in order to increase the performance. Since trie structure is huge (more than 4 kb) session data has been saved in the database table.*
+* [Circle CI](https://circleci.com/) for continuous integration.
 
 ### Test
 
@@ -133,7 +134,6 @@ Go to url localhost:3000
 
 ### Known issue
 * Dictionary used is limited to 3000 most common english words.
-* Player has to reload the page or start a new game if it says, "Please find 0 words from board." This means there are no word(s) to match.
 
  
 

@@ -1,6 +1,6 @@
 
 json.valid_words do
-  json.array! @boggle.v_words.uniq
+  json.array! @v_words
 end
 json.board do
   json.array! @boggle.board.board
