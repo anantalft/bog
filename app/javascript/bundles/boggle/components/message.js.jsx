@@ -9,7 +9,7 @@ export default class Message extends React.Component {
       message = <div style={{color: "green"}}><p>Congratulations. Reload page to play again.</p></div>
     }else if (this.props.timer) {
       message = <div>
-        <p>Please find {this.props.valid_words.length} words from board.</p>
+        <p>Please find <b>{this.props.valid_words.length}</b> words from board. <br/><b>Remaining words: </b> {this.props.valid_words.length - this.props.input_words.length } </p>
         <p style={{color: "green"}}> {this.props.desc} </p>
       </div>
     }else{
