@@ -116,7 +116,7 @@ boggle.solve
 * [Circle CI](https://circleci.com/) for continuous integration.
 
 ### Test
-[image](files/Selection_584.png)
+[Click to view test results](files/Selection_584.png)
 ### Setup instruction
 
 
